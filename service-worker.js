@@ -1,4 +1,5 @@
 console.log('sercive soekre');
+var test = 0;
 self.onfetch = function(event) {
   
   console.log('got a request');
@@ -8,7 +9,7 @@ self.onfetch = function(event) {
   var energy_level = (whom == 'Cleveland')
       ? '!!!' // take it up to 11
       : '!';
-  var version = '\n\n(Version 1)';
+  var version = '\n\n(Version 1)' + test++;
 
   var body = new Blob([salutation, whom, energy_level, version]);
 
